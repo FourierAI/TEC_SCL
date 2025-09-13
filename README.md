@@ -20,6 +20,9 @@ which adaptively optimizes contrastive pairs during training.
 256 benchmarks, alone with the release of the 532K image-text pairs
 dataset.
 
+## Dataset
+Our dataset is available at https://drive.google.com/drive/folders/1kUWfP7QBp_-HbwVIhvlooC7-wycULn1O?usp=sharing.
+
 ## Installation
 1. Clone this repository:
    ```bash

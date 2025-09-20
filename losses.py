@@ -78,9 +78,10 @@ class SupConLoss(nn.Module):
         weight = weight.repeat(anchor_count, anchor_count)
 
         # compute logits 
+        temperature = self.temperature * (1 - 0.1 * self.epoch/self.max_epoch)
         anchor_dot_contrast = torch.div(
             torch.matmul(anchor_feature, contrast_feature.T),
-            self.temperature)
+            temperature)
         
         # anchor_dot_contrast = torch.div(
         #     (1/weight) * torch.matmul(anchor_feature, contrast_feature.T),
